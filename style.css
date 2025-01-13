@@ -180,6 +180,23 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+.page-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50rem;
+}
+
+.div-parallax {
+    height: 30rem;
+    width: 100vw;
+    background-image: url("semi-permanent-makeup-parallax-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 .sliding-text {
     display: flex;
     flex-direction: column;
