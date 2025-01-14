@@ -14,5 +14,30 @@ function loadNavbar() {
         const placeholder = document.querySelector('.navbar-placeholder');
         if (placeholder)
             placeholder.innerHTML = yield (yield fetch('navbar.html')).text();
+        console.log('NIGGER');
+        const navbar = document.querySelector('.navbar');
+        const showNavbar = document.querySelector('.show-navbar');
+        const hideNavbar = document.querySelector('.hide-navbar');
+        const divToggleNavbar = document.querySelector('.div-toggle-navbar-hidden');
+        showNavbar === null || showNavbar === void 0 ? void 0 : showNavbar.addEventListener('click', (event) => {
+            divToggleNavbar === null || divToggleNavbar === void 0 ? void 0 : divToggleNavbar.classList.add('div-toggle-navbar-show');
+            divToggleNavbar === null || divToggleNavbar === void 0 ? void 0 : divToggleNavbar.classList.remove('div-toggle-navbar-hidden');
+            showNavbar.classList.add('toggle-navbar-hidden');
+            showNavbar.classList.remove('toggle-navbar-show');
+            hideNavbar === null || hideNavbar === void 0 ? void 0 : hideNavbar.classList.add('toggle-navbar-show');
+            hideNavbar === null || hideNavbar === void 0 ? void 0 : hideNavbar.classList.remove('toggle-navbar-hidden');
+            navbar === null || navbar === void 0 ? void 0 : navbar.classList.add('navbar-show');
+            navbar === null || navbar === void 0 ? void 0 : navbar.classList.remove('navbar-hidden');
+        });
+        hideNavbar === null || hideNavbar === void 0 ? void 0 : hideNavbar.addEventListener('click', (event) => {
+            divToggleNavbar === null || divToggleNavbar === void 0 ? void 0 : divToggleNavbar.classList.remove('div-toggle-navbar-show');
+            divToggleNavbar === null || divToggleNavbar === void 0 ? void 0 : divToggleNavbar.classList.add('div-toggle-navbar-hidden');
+            showNavbar === null || showNavbar === void 0 ? void 0 : showNavbar.classList.add('toggle-navbar-show');
+            showNavbar === null || showNavbar === void 0 ? void 0 : showNavbar.classList.remove('toggle-navbar-hidden');
+            hideNavbar.classList.add('toggle-navbar-hidden');
+            hideNavbar.classList.remove('toggle-navbar-show');
+            navbar === null || navbar === void 0 ? void 0 : navbar.classList.remove('navbar-show');
+            navbar === null || navbar === void 0 ? void 0 : navbar.classList.add('navbar-hidden');
+        });
     });
 }
