@@ -145,7 +145,8 @@ a:hover {
 }
 
 .logo-link > img {
-    width: 100vw;
+    width: 30rem;
+    max-width: 100vw;
 }
 
 .div-logo {
@@ -247,6 +248,19 @@ a:hover {
     color: var(--text-primary)
 }
 
+.grid-layout-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
 .div-treatment-image {
     width: 70rem;
     max-width: 100vw;
@@ -277,17 +291,14 @@ a:hover {
     color: var(--text-primary);
 }
 
-.price-list {
-    transition: all var(--transiton-speed) ease;
-}
-
-.price-list:hover {
-    transform: translateY(-0.5rem);
-}
-
 .price-list-header {
     display: flex;
     justify-content: center;
+    transition: all var(--transiton-speed) ease;
+}
+
+.price-list-header:hover {
+    transform: translateY(-0.5rem);
 }
 
 .price-list-separator {
@@ -396,6 +407,10 @@ a:hover {
     font-size: xx-large;
 }
 
+.text-xl {
+    font-size: x-large;
+}
+
 .div-page-heading {
     width: 100%;
     height: 100%;
@@ -465,6 +480,14 @@ footer {
 
 @media(prefers-reduced-motion) {
     .hidden {
+        transition: none;
+    }
+
+    .hidden-slow {
+        transition: none;
+    }
+
+    .hidden-slower {
         transition: none;
     }
 }
