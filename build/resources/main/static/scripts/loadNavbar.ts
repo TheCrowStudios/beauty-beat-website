@@ -1,9 +1,8 @@
 loadNavbar();
 
 async function loadNavbar() {
-    const placeholder = document.querySelector('.navbar-placeholder');
+    const placeholder = document.querySelector('.div-navbar-container');
     if (placeholder) placeholder.innerHTML = await (await fetch('navbar.html')).text()
-    console.log('NIGGER')
     const navbar = document.querySelector('.navbar');
     const showNavbar = document.querySelector('.show-navbar');
     const hideNavbar = document.querySelector('.hide-navbar');

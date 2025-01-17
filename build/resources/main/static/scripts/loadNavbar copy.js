@@ -11,10 +11,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 loadNavbar();
 function loadNavbar() {
     return __awaiter(this, void 0, void 0, function* () {
-        const placeholder = document.querySelector('.navbar-placeholder');
+        const placeholder = document.querySelector('.div-navbar-container');
         if (placeholder)
             placeholder.innerHTML = yield (yield fetch('navbar.html')).text();
-        console.log('NIGGER');
         const navbar = document.querySelector('.navbar');
         const showNavbar = document.querySelector('.show-navbar');
         const hideNavbar = document.querySelector('.hide-navbar');

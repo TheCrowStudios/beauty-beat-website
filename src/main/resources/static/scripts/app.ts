@@ -7,7 +7,6 @@ const observer = new IntersectionObserver(async (entries) => {
         console.log(entry);
         // TODO - fix the delay thing
         if (entry.isIntersecting) {
-            await sleep(500);
             entry.target.classList.add('show');
             console.log('timeout');
         }

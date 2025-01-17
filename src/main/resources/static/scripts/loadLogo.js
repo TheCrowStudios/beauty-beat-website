@@ -8,19 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+loadLogo();
+function loadLogo() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const placeholder = document.querySelector('.div-logo');
+        if (placeholder)
+            placeholder.innerHTML = yield (yield fetch('logo.html')).text();
+    });
 }
-const observer = new IntersectionObserver((entries) => __awaiter(void 0, void 0, void 0, function* () {
-    for (const entry of entries) {
-        console.log(entry);
-        // TODO - fix the delay thing
-        if (entry.isIntersecting) {
-            yield sleep(500);
-            entry.target.classList.add('show');
-            console.log('timeout');
-        }
-    }
-}), { threshold: [0.8] });
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((element) => observer.observe(element));
